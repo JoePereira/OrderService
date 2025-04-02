@@ -32,6 +32,15 @@ O frontend foi desenvolvido utilizando Next.js, Tailwind e Shadcn com TypeScript
 
 ## 🚀 Como Rodar o Projeto
 
+### Configuração do Banco de Dados e Frontend com Docker
+1. Certifique-se de que o Docker está instalado em sua máquina.
+2. Execute o seguinte comando para subir o banco de dados e o frontend:
+   ```sh
+   docker-compose up
+   ```
+
+O frontend ficará disponível em `http://localhost:3000` e o banco de dados em `localhost:5432` db_name: `ordersdb` password: `postgres`.
+
 ### Configuração do Backend
 1. Acesse a pasta do backend:
    ```sh
@@ -46,15 +55,6 @@ O frontend foi desenvolvido utilizando Next.js, Tailwind e Shadcn com TypeScript
    ```sh
    dotnet run
    ```
-
-### Configuração do Banco de Dados e Frontend com Docker
-1. Certifique-se de que o Docker está instalado em sua máquina.
-2. Execute o seguinte comando para subir o banco de dados e o frontend:
-   ```sh
-   docker-compose up
-   ```
-
-O frontend ficará disponível em `http://localhost:3000` e o banco de dados em `localhost:5432` db_name: `ordersdb` password: `postgres`.
 
 ## ⚠ Problemas Encontrados
 Durante o desenvolvimento, foram encontradas dificuldades na integração com o **Azure Service Bus** e na **criação do container do backend no Docker**. Devido a esses problemas, a solução encontrada foi rodar o backend manualmente enquanto o banco de dados e o frontend são executados via Docker.
